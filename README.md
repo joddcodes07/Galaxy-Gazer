@@ -5,7 +5,7 @@ Galaxy Gazer is an interactive web application built to demonstrate core front-e
 
 ## API Integration
 * **API:** NASA Astronomy Picture of the Day (APOD) API
-* **Base URL:** `https://api.nasa.gov/planetary/apod`
+* **Base URL:** `https://api.nasa.gov/`
 
 
 ## Planned Features
