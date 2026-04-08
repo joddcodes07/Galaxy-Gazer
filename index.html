@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,6 +12,9 @@
     <div id="controls">
         <input type="date" id="date-input">
         <button id="search-btn">Explore</button>
+        <div id="controls">
+    <input type="text" id="search-input" placeholder="Search the stars (e.g., Mars, Nebula)...">
+    </div>
     </div>
 
     <div id="loading-message" >
@@ -19,6 +22,47 @@
     </div>
 
     <main id="gallery-container"></main>
+
+    <script src="script.js"></script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy Gazer | NASA Mission Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Galaxy Gazer</h1>
+        
+        <div id="controls">
+            <div class="control-group">
+                <label for="search-input">Search the Cosmos:</label>
+                <input type="text" id="search-input" placeholder="e.g. Nebula, Mars, Galaxy...">
+            </div>
+
+            <div class="control-group">
+                <label for="date-input">Time Machine (Pick a Date):</label>
+                <input type="date" id="date-input">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="loading-message">
+            <div class="spinner"></div> <p>Initializing Warp Drive...</p>
+        </div>
+
+        <section id="gallery-container"></section>
+    </main>
+
+    <footer>
+        <p>Data provided by NASA API | Explore the Universe</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
