@@ -9,13 +9,17 @@
 <body>
     <nav>
         <div class="logo">GalaxyGazer</div>
+        <div class="nav-links">
+            <span id="nav-home" class="nav-item active">Home</span>
+            <span id="nav-favs" class="nav-item">Favourites</span>
+        </div>
     </nav>
     <main class="split-layout">
         <div class="left-panel">
             <div class="glass-card form-card">
                 <div class="form-header">
                     <h3>See the universe on the day you were born !</h3>
-                    <p>Select your birth date to see your star.</p>
+                    <p>Select your birth date to reveal the cosmos.</p>
                 </div>
                 <div class="inputs-row">
                     <div class="input-group">
@@ -39,10 +43,15 @@
                 </div>
                 <button id="fetch-btn">See Space Photo</button>
             </div>
+            
+            <div id="birthday-loader" class="hidden loader-text">Locating your star...</div>
+            <div id="birthday-result-container"></div>
         </div>
 
         <div class="right-panel">
             <div class="glass-card gallery-container">
+                <h3 id="panel-title">Cosmic Discoveries</h3>
+                <div id="loader" class="hidden loader-text">Gathering Stardust...</div>
                 <div id="gallery-grid" class="minimal-grid"></div>
             </div>
         </div>

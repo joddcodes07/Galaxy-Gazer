@@ -20,23 +20,6 @@ nav {
     letter-spacing: 4px;
     font-weight: bold;
 }
-
-.nav-links {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    font-size: 14px;
-}
-
-.nav-btn {
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: white;
-    padding: 8px 16px;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
 .split-layout {
     display: flex;
     padding: 60px 40px;
@@ -199,4 +182,120 @@ select {
 @media (max-width: 768px) {
     .split-layout { flex-direction: column; }
     .minimal-grid { grid-template-columns: repeat(2, 1fr); }
+}
+#loader {
+    text-align: center;
+    padding: 60px 0;
+    color: #8b7fed;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.4; }
+    50% { opacity: 1; }
+    100% { opacity: 0.4; }
+}
+
+.hidden {
+    display: none !important;
+}
+.loader-text {
+    text-align: center;
+    padding: 40px 0;
+    color: #8b7fed;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: pulse 1.5s infinite;
+}
+
+#birthday-result-container {
+    margin-top: 20px;
+}
+
+.birthday-card {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    animation: fadeIn 0.5s ease;
+}
+
+.birthday-card img {
+    width: 100%;
+    display: block;
+    border-radius: 16px;
+}
+
+.birthday-info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background: rgba(20, 20, 30, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.birthday-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+}
+
+.birthday-info p {
+    margin: 0;
+    color: #8b7fed;
+    font-size: 12px;
+}
+
+.action-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.fav-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.fav-btn.active {
+    background: #8b7fed;
+    border-color: #8b7fed;
+}
+
+.nav-item {
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.nav-item.active {
+    color: #8b7fed;
+    background: rgba(139, 127, 237, 0.1);
+}
+
+#panel-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #8b7fed;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
